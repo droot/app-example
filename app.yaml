@@ -2,6 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: deployment
+  namespace: example
+  labels:
+    app.kubernetes.io/app: example
 spec:
   replicas: 3
   template:
@@ -11,3 +14,9 @@ spec:
         image: nginx:1.14.2
         ports:
         - containerPort: 80
+    metadata:
+      labels:
+        app.kubernetes.io/app: example
+  selector:
+    matchLabels:
+      app.kubernetes.io/app: example

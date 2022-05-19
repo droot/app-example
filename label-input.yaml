@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: label-input
+  annotations:
+    config.kubernetes.io/local-config: "true"
+  labels:
+    app.kubernetes.io/app: example
+data:
+  app.kubernetes.io/app: example

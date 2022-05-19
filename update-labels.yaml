@@ -16,4 +16,4 @@ replacements:
       kind: ConfigMap
       name: label-input
     fieldPaths:
-    - app\.kubernetes\.io\/app
+    - data.[app.kubernetes.io/app]
